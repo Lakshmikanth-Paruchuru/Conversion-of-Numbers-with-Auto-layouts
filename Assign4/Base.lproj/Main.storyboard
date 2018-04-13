@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assign4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Maf-7f-akH">
+                                <rect key="frame" x="50" y="30" width="220" height="30"/>
+                                <color key="textColor" red="1" green="0.66244980398283548" blue="0.15886919184007209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GAs-Yt-Zda"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uT-MB-cqS">
+                                <rect key="frame" x="50" y="88" width="220" height="0.0"/>
+                                <color key="tintColor" red="0.98970289952951418" green="1" blue="0.98583476142478288" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-iQ-sfZ">
+                                <rect key="frame" x="50" y="146" width="220" height="30"/>
+                                <state key="normal" title="Convert To Binary"/>
+                                <connections>
+                                    <action selector="bin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0P-vU-Xsa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnN-AI-o6e">
+                                <rect key="frame" x="50" y="237" width="220" height="30"/>
+                                <state key="normal" title="Convert To Octal"/>
+                                <connections>
+                                    <action selector="oct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXK-VY-wvL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-Cw-jff">
+                                <rect key="frame" x="50" y="190" width="220" height="30"/>
+                                <state key="normal" title="Convert To Hexa"/>
+                                <connections>
+                                    <action selector="hex:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb7-Si-5vs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.93797470908891201" blue="0.8421731125778662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C0D-iQ-sfZ" firstAttribute="leading" secondItem="7uT-MB-cqS" secondAttribute="leading" id="0Cv-PL-Nxf"/>
+                            <constraint firstItem="Maf-7f-akH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="3iu-FF-M7K"/>
+                            <constraint firstItem="JnN-AI-o6e" firstAttribute="top" secondItem="uSX-Cw-jff" secondAttribute="bottom" constant="17" id="9bJ-go-nRZ"/>
+                            <constraint firstItem="7uT-MB-cqS" firstAttribute="trailing" secondItem="Maf-7f-akH" secondAttribute="trailing" id="FT4-M0-lrj"/>
+                            <constraint firstItem="C0D-iQ-sfZ" firstAttribute="trailing" secondItem="7uT-MB-cqS" secondAttribute="trailing" id="MCS-Gc-zAA"/>
+                            <constraint firstItem="Maf-7f-akH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="S7J-1y-2ZT"/>
+                            <constraint firstItem="JnN-AI-o6e" firstAttribute="leading" secondItem="uSX-Cw-jff" secondAttribute="leading" id="UHO-Y1-cXg"/>
+                            <constraint firstItem="uSX-Cw-jff" firstAttribute="top" secondItem="C0D-iQ-sfZ" secondAttribute="bottom" constant="14" id="Z7f-Mq-X7T"/>
+                            <constraint firstItem="7uT-MB-cqS" firstAttribute="leading" secondItem="Maf-7f-akH" secondAttribute="leading" id="bmW-Hy-5ew"/>
+                            <constraint firstItem="Maf-7f-akH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cRL-Xk-voP"/>
+                            <constraint firstItem="JnN-AI-o6e" firstAttribute="trailing" secondItem="uSX-Cw-jff" secondAttribute="trailing" id="msY-pK-AI7"/>
+                            <constraint firstItem="7uT-MB-cqS" firstAttribute="top" secondItem="Maf-7f-akH" secondAttribute="bottom" constant="28" id="t0s-u2-QOC"/>
+                            <constraint firstItem="C0D-iQ-sfZ" firstAttribute="top" secondItem="7uT-MB-cqS" secondAttribute="bottom" constant="58" id="thX-rf-Kvy"/>
+                            <constraint firstItem="uSX-Cw-jff" firstAttribute="leading" secondItem="C0D-iQ-sfZ" secondAttribute="leading" id="uML-RY-NYj"/>
+                            <constraint firstItem="uSX-Cw-jff" firstAttribute="trailing" secondItem="C0D-iQ-sfZ" secondAttribute="trailing" id="vaD-Vz-Ly3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="decimal" destination="Maf-7f-akH" id="jE5-am-Hya"/>
+                        <outlet property="result" destination="7uT-MB-cqS" id="mav-EL-BAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
